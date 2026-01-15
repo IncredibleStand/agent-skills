@@ -4,12 +4,12 @@
   "description": "Build tooling for React Best Practices skill",
   "type": "module",
   "scripts": {
-    "build": "pnpm build-agents && pnpm extract-tests",
-    "build-agents": "tsx src/build.ts",
+    "build": "node init && pnpm build-agents && pnpm extract-tests",
+    "build-agents": "node init && tsx src/build.ts",
     "validate": "tsx src/validate.ts",
     "extract-tests": "tsx src/extract-tests.ts",
     "migrate": "tsx src/migrate.ts",
-    "dev": "pnpm build && pnpm validate"
+    "dev": "node init && pnpm build && pnpm validate"
   },
   "keywords": [
     "react",
